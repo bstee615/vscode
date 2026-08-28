@@ -524,6 +524,8 @@ export enum PromptingStrategy {
 	PatchBased02 = 'patchBased02',
 	/** PatchBased02 variant: line numbers on recent docs. */
 	PatchBased02WithRecentLineNumbers = 'patchBased02WithRecentLineNumbers',
+	/** Optimized PatchBased02 variant with line numbers on recent docs. */
+	PatchBased02Optimized = 'patchBased02Optimized',
 	/** PatchBased02 variant: no line numbers on recent docs. */
 	PatchBased02WithoutRecentLineNumbers = 'patchBased02WithoutRecentLineNumbers',
 	/**
@@ -577,6 +579,7 @@ export namespace ResponseFormat {
 			case PromptingStrategy.PatchBased01:
 			case PromptingStrategy.PatchBased02:
 			case PromptingStrategy.PatchBased02WithRecentLineNumbers:
+			case PromptingStrategy.PatchBased02Optimized:
 			case PromptingStrategy.PatchBased02WithoutRecentLineNumbers:
 				return ResponseFormat.CustomDiffPatch;
 			case PromptingStrategy.Xtab275EditIntent:
